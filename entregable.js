@@ -2,17 +2,12 @@
 
 let monto = parseFloat(prompt("ingrese el monto del producto"))
 
-
 let cantidadCuotas = parseInt(prompt("Ingrese la cantidad de cuotas 1, 3, 6, 9, 12 , 18"))
-
 
 let promo =((monto * 10) / 100)
 
 
 let montoConCuota = monto
-
-
-
 
 const calculador = () => {
 

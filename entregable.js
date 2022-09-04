@@ -29,6 +29,3 @@ const calculador = () => {
 }
 
 calculador()
-
-
-

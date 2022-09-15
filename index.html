@@ -1,25 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Interactuando con html</title>
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script defer src="./bootstrap/jquery/jquery.min.js"></script>
+    <script defer src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script defer src="./js/sales.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
 
 </head>
 
-<header>
-    
+<header class="header text-center">
+    <h2 class="">XIAOMI || IPHONE</h2>
+    <h3 class="">EN STOCK || ENTREGA INMEDIATA</h3>
 </header>
+
 <body>
+    <section class="justify-content-center container">
+        <div class="text-center">
+            <div>
+                <label for="higherPrice">
+                    <input type="radio" id="higherPrice" value="option1" name="price">
+                    Mayor precio
+                </label>
+            </div>
+            <div>
+                <label for="lowerPrice">
+                    <input type="radio" id="lowerPrice" value="option2" name="price">
+                    Menor precio
+                </label>
+            </div>
+            <div class=" row m-2 justify-content-around ">
+                <div>
+                    <input type="text" class="p-1" placeholder="Busca tu proximo celular " id="filter">
+                    <button type="button" class="btn btn-secondary" id="result">buscar</button>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-secondary" id="addingProducts" data-toggle="tooltip"
+                        data-placement="top" title="Cargar nuevo producto">
+                        <strong>+</strong>
+                    </button>
+                    <button type="button" class="btn btn-secondary " id="everybody">
+                        Productos
+                    </button>
 
-    <div>
-        <h2>Calculador de descuento y cuotas</h2>
-        <p>Con un solo pago hay un 10% de descuento</p>
-        <p>Pagando en cuotas hay un 5% de interes en el monto</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
 
+
+    <div class="row mt-3 justify-content-center" id="container">
     </div>
-    <script src="entregable.js"></script>
-</body>
-</html>
 
+
+
+
+
+
+</body>
+
+</html>

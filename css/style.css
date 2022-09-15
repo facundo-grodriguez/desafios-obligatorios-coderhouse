@@ -1,0 +1,45 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-image: linear-gradient(to bottom, #b2e1eb, #b4d7e4, #b7cdda, #b8c4cf, #bbc2cf, #bec0cd, #c2becb, #d2c0cf, #e3c2cc, #f1c6c4, #f7ccb9,#b0ebefe7);
+    width: 100%;
+    height: 100vh;
+}
+
+.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.card {
+    padding: 15px;
+    box-shadow: 10px 8px 10px ;
+    border-radius: 10px;
+}
+
+li {
+    list-style: none;
+    
+}
+
+.image {
+    width: 250px;
+    margin: auto;
+}
+
+.price{
+    margin: 10px;
+}
+
+.button{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #b0c4dead;
+}

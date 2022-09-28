@@ -1,45 +1,159 @@
 *,
 ::before,
-::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
-body{
-    background-image: linear-gradient(to bottom, #b2e1eb, #b4d7e4, #b7cdda, #b8c4cf, #bbc2cf, #bec0cd, #c2becb, #d2c0cf, #e3c2cc, #f1c6c4, #f7ccb9,#b0ebefe7);
-    width: 100%;
-    height: 100vh;
+.icon {
+width: 200px;
+}
+
+body {
+background-image: linear-gradient(
+    to bottom,
+    #b2e1eb,
+    #b4d7e4,
+    #b7cdda,
+    #b8c4cf,
+    #bbc2cf,
+    #bec0cd,
+    #c2becb,
+    #d2c0cf,
+    #e3c2cc,
+    #f1c6c4,
+    #f7ccb9,
+    #b0ebefe7
+);
+
+width: 100%;
+min-height: 100vh;
 }
 
 .row {
-    margin-right: 0;
-    margin-left: 0;
+margin-right: 0;
+margin-left: 0;
 }
 
 .card {
-    padding: 15px;
-    box-shadow: 10px 8px 10px ;
-    border-radius: 10px;
+padding: 15px;
+box-shadow: 10px 8px 10px;
+border-radius: 10px;
 }
 
 li {
-    list-style: none;
-    
+list-style: none;
 }
 
 .image {
-    width: 250px;
-    margin: auto;
+width: 90%;
+margin: auto;
 }
 
-.price{
+.price {
     margin: 10px;
 }
 
-.button{
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #b0c4dead;
+.button {
+width: 100%;
+padding: 5px;
+border: 1px solid #b0c4dead;
+}
+
+/* From uiverse.io by @alexruix */
+.card {
+padding: 0.8em;
+position: relative;
+overflow: visible;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card-img {
+border-radius: 0.5rem;
+transition: 0.3s ease;
+}
+
+.card-info {
+padding-top: 10%;
+}
+
+svg {
+width: 20px;
+height: 20px;
+}
+
+.card-footer {
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 10px;
+border-top: 1px solid #ddd;
+}
+
+/*Text*/
+.text-title {
+font-weight: 900;
+font-size: 1.2em;
+line-height: 1.5;
+}
+
+.text-body {
+font-size: 0.9em;
+padding-bottom: 10px;
+}
+
+/*Button*/
+.card-button {
+border: 1px solid #252525;
+display: flex;
+padding: 0.3em;
+cursor: pointer;
+border-radius: 50px;
+transition: 0.3s ease-in-out;
+}
+
+/*Hover*/
+
+
+.card-img:hover {
+transform: translateY(-5%);
+box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px,
+    rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+}
+
+.card-button:hover {
+border: 1px solid #ffcaa6;
+background-color: #ffcaa6;
+}
+
+.fa-regular{
+    width: 5vh;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart {
+    background-image: linear-gradient(
+    to left top,
+    #b2e1eb,
+    #b4d7e4,
+    #b7cdda,
+    #b8c4cf,
+    #bbc2cf,
+    #bec0cd,
+    #c2becb,
+    #d2c0cf,
+    #e3c2cc,
+    #f1c6c4,
+    #f7ccb9,
+    #b0ebefe7
+);
+}
+
+.collapse.show.cart {
+    display: flex;
 }

@@ -3,9 +3,11 @@ const filter = document.querySelector("#filter")//Filtro
 const result = document.querySelector("#result")//resultado
 const filtered = document.getElementsByName("filtered")//Menor precio / Mayor precio 
 const select = document.querySelector("#filteredPrice")//select
-const addingNewProducts = document.querySelector("#addingProducts")//Cargando productos
 const container = document.querySelector("#container")//Contenedor de cards
 const btnCart = document.querySelector("#btnCart") //Contenedor de productos
+
+
+
 
 
 // VARIABLES NECESARIAS 
@@ -46,7 +48,7 @@ function list() {
     products.push(new Product("XIAOMI", "REDMI 10S", "./assets/images/redmi-10s.jpg", 260))
     products.push(new Product("XIAOMI", "REDMI 10 PRO", "./assets/images/redmi-10pro.jpg", 280))
     products.push(new Product("XIAOMI", "NOTE 11", "./assets/images/redmi-note11.jpg", 220))
-    products.push(new Product("XIAOMI", "NOTE 11S", "./assets/images/redmi-note11s.jpg", 275))
+/*     products.push(new Product("XIAOMI", "NOTE 11S", "./assets/images/redmi-note11s.jpg", 275))
     products.push(new Product("XIAOMI", "NOTE 11 PRO", "./assets/images/redmi-note11pro.jpg", 305))
     products.push(new Product("XIAOMI", "11 LITE G5 NE", "./assets/images/redmi-11lite.jpg", 365))
     products.push(new Product("XIAOMI", "MI 12", "./assets/images/redmi-mi12.jpg", 685))
@@ -59,34 +61,21 @@ function list() {
     products.push(new Product("IPHONE", "12", "./assets/images/iphone-12.jpg", 930))
     products.push(new Product("IPHONE", "13", "./assets/images/iphone-13.jpg", 1110))
     products.push(new Product("IPHONE", "13 PRO", "./assets/images/iphone-13pro.jpg", 1500))
-    products.push(new Product("IPHONE", "13 PRO MAX 1TB", "./assets/images/iphone-13promax.jpg", 1850))
+    products.push(new Product("IPHONE", "13 PRO MAX 1TB", "./assets/images/iphone-13promax.jpg", 1850)) */
 
-}
-
-
-// AGREGADO DE PRODUCTOS
-const addingProducts = () => {
-    let brand = prompt("ingrese una marca").toUpperCase()
-    let name = prompt("ingrese nombre").toUpperCase()
-    let image = prompt("ingrese el url de la imagen")
-    let price = Number(prompt("ingrese el precio"))
-
-
-    let newProduct = new Product(brand, name, image, price)
-
-    products.push(newProduct)
 }
 
 //INGRESO ADMIN / TERNARIO
 const adminLogin = () => {
     alert("Solo el administrador puede cargar un nuevo producto")
     const name = "admin"
-    const password = 1234
+    const password= 1234
     const nameUser = prompt("nombre")
     const passwordUser = prompt("contraseña")
     const permitted = (nameUser === name || passwordUser === password)
     
-    permitted ? (addingProducts(), loadProducts(products)) : alert("Usuario o contraseña invalido") 
+    permitted ? addingProducts() : alert("Usuario o contraseña invalido")  
+
 }
 
 // CARGANDO PRODUCTOS (NUEVO)
@@ -118,14 +107,14 @@ const loadProducts = (products) => {
     
             `
         container.appendChild(div)
-    } 
+    }
 }
 list()
 loadProducts(products)
 
 
 // PARA ORDENAR LOS PRECIOS (NUEVO)
-function optionPrice() {   
+function optionPrice() {
     products.sort((a, b) => {
         if (filteredPrice.value === "lowerPrice") {
             if (a.price > b.price)
@@ -188,8 +177,6 @@ function shortcut(e) {
 
 //OPCION DE PRECIOS
 select.addEventListener("change", () => optionPrice())
-//AGREGADO DE PRODUCTOS
-addingNewProducts.addEventListener("click", () => adminLogin())
 //BUSCADOR
 result.addEventListener("click", searching)
-filter.addEventListener("keypress", () => shortcut(e) )
+filter.addEventListener("keypress", () => shortcut(e))

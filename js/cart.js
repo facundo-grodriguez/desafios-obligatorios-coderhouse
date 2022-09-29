@@ -69,7 +69,6 @@ const loadCart = () => {
 
 }
 
-
 let collection = document.querySelector(".cart");
 
 collection.addEventListener("click", remove);
@@ -105,7 +104,5 @@ function recoveryCart() {
         cart.push(product)
     });
     updateCart(cart)
-    console.log(cart);
-
 }
 recoveryCart()

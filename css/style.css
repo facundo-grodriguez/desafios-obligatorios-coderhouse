@@ -157,3 +157,12 @@ background-color: #ffcaa6;
 .collapse.show.cart {
     display: flex;
 }
+
+.links {
+    color:#ffffff
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}

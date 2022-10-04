@@ -1,23 +1,8 @@
-// LLAMADAS AL HTML
-const filter = document.querySelector("#filter")//Filtro
-const result = document.querySelector("#result")//resultado
-const filtered = document.getElementsByName("filtered")//Menor precio / Mayor precio 
-const select = document.querySelector("#filteredPrice")//select
-const container = document.querySelector("#container")//Contenedor de cards
-const btnCart = document.querySelector("#btnCart") //Contenedor de productos
-
-
-
-
-
-// VARIABLES NECESARIAS 
-
-
 // CLASE CONSTRUCTORA   
 class Product {
     constructor(brand, name, image, price, quantity) {
-        this.brand = brand
-        this.name = name
+        this.brand = brand.toUpperCase()
+        this.name = name.toUpperCase()
         this.image = image
         this.price = price
         this.quantity = 0
@@ -65,18 +50,7 @@ function list() {
 
 }
 
-//INGRESO ADMIN / TERNARIO
-const adminLogin = () => {
-    alert("Solo el administrador puede cargar un nuevo producto")
-    const name = "admin"
-    const password= 1234
-    const nameUser = prompt("nombre")
-    const passwordUser = prompt("contraseña")
-    const permitted = (nameUser === name || passwordUser === password)
-    
-    permitted ? addingProducts() : alert("Usuario o contraseña invalido")  
 
-}
 
 // CARGANDO PRODUCTOS (NUEVO)
 let div = ""
@@ -165,8 +139,6 @@ function searching() {
 loadCart()
 
 //BUSQUEDA DE ATAJO ENTER
-
-
 function shortcut(e) {
     if (e.key === "Enter") {
         searching()

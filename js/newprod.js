@@ -16,11 +16,10 @@ const addingProducts = () => {
 
 //INGRESO ADMIN / TERNARIO / SWEET ALERT
 const adminLogin = async () => {
-    debugger
     const name = "admin"
     const password = 1234
     
-    const { value: formValues } = Swal.fire({
+    const admin = await Swal.fire({
         title: 'Datos de administrador',
         html:
             '<input id="swal-input1" class="swal2-input" placeholder="Usuario" required>' +
@@ -66,6 +65,7 @@ const appearProducts = () => {
         section2.style.display = "none"
     }
 }
+
 
 
 addProducts.addEventListener("click", adminLogin)

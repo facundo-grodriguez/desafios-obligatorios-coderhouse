@@ -20,7 +20,7 @@ const adminLogin = async () => {
     const name = "admin"
     const password = 1234
     
-    const { value: formValues } = await Swal.fire({
+    const { value: formValues } = Swal.fire({
         title: 'Datos de administrador',
         html:
             '<input id="swal-input1" class="swal2-input" placeholder="Usuario" required>' +
@@ -65,13 +65,6 @@ const appearProducts = () => {
     } else {
         section2.style.display = "none"
     }
-}
-
-const cleanForm = () => {
-    brand.value = ""
-    pName.value = ""
-    image.value = ""
-    price.value = ""
 }
 
 

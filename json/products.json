@@ -1,0 +1,143 @@
+[
+    {
+        "brand": "XIAOMI",
+        "name": "REDMI 9A",
+        "image": "./assets/images/redmi-9A.jpg",
+        "price": 145,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "NOTE 9 PRO",
+        "image": "./assets/images/redmiNote9Pro.jpg",
+        "price": 290,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": " REDMI 10",
+        "image": "./assets/images/redmi-10.png",
+        "price": 215,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "REDMI 10A",
+        "image": "./assets/images/redmi-10a.jpg",
+        "price": 180,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "REDMI 10C",
+        "image": "./assets/images/redmi-10c.jpg",
+        "price": 190,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "REDMI 10S",
+        "image": "./assets/images/redmi-10s.jpg",
+        "price": 260,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "REDMI 10 PRO",
+        "image": "./assets/images/redmi-10pro.jpg",
+        "price": 280,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "NOTE 11",
+        "image": "./assets/images/redmi-note11.jpg",
+        "price": 220,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "NOTE 11S",
+        "image": "./assets/images/redmi-note11s.jpg",
+        "price": 250,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "NOTE 11 PRO",
+        "image": "./assets/images/redmi-note11pro.jpg",
+        "prie": 305,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "11 LITE G5 NE",
+        "image": "./assets/images/redmi-11lite.jpg",
+        "price": 365,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "MI 12",
+        "image": "./assets/images/redmi-mi12.jpg",
+        "price": 685,
+        "quentity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "POCO M4 PRO",
+        "image": "./assets/images/redmi-poco4pro.jpg",
+        "price": 255,
+        "quantity": 0
+    },
+    {
+        "brand": "XIAOMI",
+        "name": "POCO X4 PRO",
+        "image": "./assets/images/redmi-pocox4pro.jpg",
+        "prie": 360,
+        "quantity": 0
+    },
+    {
+        "brand": "IPHONE",
+        "name": "11",
+        "image": "./assets/images/iphone-11.jpg",
+        "price": 620,
+        "quantiy": 0
+    },
+    {
+        "brand": "IPHONE",
+        "name": "12 MINI",
+        "image": "./assets/images/iphone-12mini.jpg",
+        "price": 79,
+        "quantity": 0
+    },
+    {
+        "brand": "IPHONE",
+        "name": "12",
+        "image": "./assets/images/iphone-12.jpg",
+        "price": 930,
+        "quantity": 0
+    },
+    {
+        "brand": "IPHONE",
+        "name": "13",
+        "image": "./assets/images/iphone-13.jpg",
+        "price": 1110,
+        "quantity": 0
+    },
+    {
+        "brand": "IPHONE",
+        "name": "13 PRO",
+        "image": "./assets/images/iphone-13pro.jpg",
+        "price": 1500,
+        "quantity": 0
+    },
+    {
+        "brand": "IPHONE",
+        "name": "13 PRO MAX 1TB",
+        "image": "./assets/images/iphone-13promax.jpg",
+        "price": 1850,
+        "quantity": 0
+    }
+]
+

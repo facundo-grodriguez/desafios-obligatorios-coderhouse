@@ -19,4 +19,6 @@ const submit = document.querySelector("#submitNewProduct")
 const section1 = document.querySelector("#products")
 const section2 = document.querySelector("#form")
 
+//LLAMADA A EL JSON
+const URL = "./json/products.json"
 

@@ -5,7 +5,7 @@ const cart = []
 const updateCart = (cart) => {
     let cartContainer = document.querySelector("#cart")
     let container = document.getElementById("cartContainer")
-    if (container) {
+    if (container){
         cartContainer.innerHTML = ""
     }
     for (const product of cart) {
@@ -28,9 +28,14 @@ const updateCart = (cart) => {
                         <i class="fa-regular fa-trash-can remove" data-id="${product.name}"></i>
                         </div>
                     </div>
+                    
+
             `
         cartContainer.appendChild(div)
     }
+    
+
+
 }
 
 const saveInLocalStorage = (key, value) => {
@@ -102,3 +107,6 @@ function recoveryCart() {
     }
 }
 recoveryCart()
+
+
+//agregar el boton comprar

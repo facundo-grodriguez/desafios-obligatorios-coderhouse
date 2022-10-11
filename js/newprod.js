@@ -74,3 +74,5 @@ allProducts.addEventListener("click", appearProducts)
 submit.addEventListener("click",() => {
     addingProducts(), Swal.fire('Se cargó un nuevo producto');
 })
+
+//precargar datos del form

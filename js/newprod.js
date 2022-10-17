@@ -1,7 +1,18 @@
+// CLASE CONSTRUCTORA  
+class Product {
+    constructor(brand, name, image, price, quantity) {
+        this.brand = brand
+        this.name = name
+        this.image = "./assets/images/iphone-14.jpg"
+        this.price = price
+        this.quantity = 0
+    }
+}
+
 // AGREGADO DE PRODUCTOS
 const addingProducts = () => {
-    brand = brand.value
-    pName = pName.value
+    brand = brand.value.toUpperCase()
+    pName = pName.value.toUpperCase()
     image = image.value
     price = price.value
 
@@ -13,7 +24,6 @@ const addingProducts = () => {
 
 }
 
-
 //INGRESO ADMIN / TERNARIO / SWEET ALERT
 const adminLogin = async () => {
     const name = "admin"
@@ -22,8 +32,8 @@ const adminLogin = async () => {
     const admin = await Swal.fire({
         title: 'Datos de administrador',
         html:
-            '<input id="swal-input1" class="swal2-input" placeholder="Usuario" required>' +
-            '<input type="password" id="swal-input2" class="swal2-input" placeholder="Contraseña" required>',
+            '<input id="swal-input1" class="swal2-input" placeholder="Usuario" value="admin" required>' +
+            '<input type="password" id="swal-input2" class="swal2-input" placeholder="Contraseña" value="1234" required>',
         focusConfirm: false,
         showCancelButton: true,
         preConfirm: () => {
@@ -32,6 +42,8 @@ const adminLogin = async () => {
                 pass = document.getElementById('swal-input2').value
             ]
         }
+        
+        
         
     })
     
@@ -74,5 +86,3 @@ allProducts.addEventListener("click", appearProducts)
 submit.addEventListener("click",() => {
     addingProducts(), Swal.fire('Se cargó un nuevo producto');
 })
-
-//precargar datos del form

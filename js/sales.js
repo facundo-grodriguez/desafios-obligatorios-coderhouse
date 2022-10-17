@@ -1,22 +1,3 @@
-// CLASE CONSTRUCTORA   
-class Product {
-    constructor(brand, name, image, price, quantity) {
-        this.brand = brand.toUpperCase()
-        this.name = name.toUpperCase()
-        this.image = image
-        this.price = price
-        this.quantity = 0
-    }
-    priceIVA() {
-        this.price = this.price * IVA
-    }
-    discountStock(units) {
-        this.quantity = this.quantity - units
-    }
-
-}
-
-
 // ARRAYS
 const search = []
 
@@ -27,11 +8,15 @@ const loadContent = async () => {
     try {
         const response = await fetch(URL)
         const data = await response.json()
-        loadProducts(data) 
+        loadProducts(data)
         products.push(...data)
     } catch (error) {
-        
-    }finally{
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No se pueden cargar los productos'
+        })
+    } finally {
         loadCart()
     }
 }
@@ -70,9 +55,6 @@ const loadProducts = (products) => {
     }
 }
 
-
-
-
 // PARA ORDENAR LOS PRECIOS (NUEVO)
 function optionPrice() {
     products.sort((a, b) => {
@@ -92,6 +74,7 @@ function optionPrice() {
         }
     })
     loadProducts(products)
+    loadCart()
 }
 
 
@@ -107,28 +90,32 @@ function searching() {
                 loadProducts(search)
             })
         } else if (parameter !== "") {
-            result1 = products.filter(product => product.brand.match(parameter))
-            if (result1.length !== 0) {
-                search.push(result1)
+            secondResult = products.filter(product => product.brand.match(parameter))
+            if (secondResult.length !== 0) {
+                search.push(secondResult)
                 search.map(search => {
                     products
                     loadProducts(search)
                 })
             } else {
-                alert("No se encontro el producto")
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'No existe ese producto'
+                })
             }
         }
     }
+    loadCart()
 }
 
 
-loadCart()
 
 //BUSQUEDA DE ATAJO ENTER
-function shortcut(e) {
-    if (e.key === "Enter") {
-        searching()
-    }
+const shortcut = (e) => {
+        if (e.key === "Enter") {
+            searching()
+        }
 }
 
 // BOTONES
@@ -137,4 +124,5 @@ function shortcut(e) {
 select.addEventListener("change", () => optionPrice())
 //BUSCADOR
 result.addEventListener("click", searching)
-filter.addEventListener("keypress", () => shortcut(e))
+filter.addEventListener("keydown",(e) =>{ e.preventdefault, shortcut(e) })
+

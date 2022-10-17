@@ -5,15 +5,15 @@ const cart = []
 const updateCart = (cart) => {
     let cartContainer = document.querySelector("#cart")
     let container = document.getElementById("cartContainer")
-    if (container){
+    if (container) {
         cartContainer.innerHTML = ""
     }
     for (const product of cart) {
-        let div = document.createElement("div")
+        const div = document.createElement("div")
         div.setAttribute("class", "card text-center col-xl-2 col-md-3 col-sm-4 col-8 m-3")
         div.setAttribute("id", "cartContainer")
         div.innerHTML +=
-            `
+        `
                     <div class="card-info">
                         <p class="text-title">${product.name} </p>
                         <p class="text-body">${product.brand}</p>
@@ -28,15 +28,12 @@ const updateCart = (cart) => {
                         <i class="fa-regular fa-trash-can remove" data-id="${product.name}"></i>
                         </div>
                     </div>
-                    
-
             `
-        cartContainer.appendChild(div)
+            cartContainer.appendChild(div)
+        }
+        /* div.innerHTML = `<button type="button" class="btn-cart btn btn-secondary " id="buy">Finalizar compra</button>` */
+        
     }
-    
-
-
-}
 
 const saveInLocalStorage = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value))
@@ -70,6 +67,7 @@ const loadCart = () => {
     }
 
 }
+
 
 let collection = document.querySelector(".cart");
 
@@ -110,3 +108,9 @@ recoveryCart()
 
 
 //agregar el boton comprar
+buy.addEventListener("click", () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Compra realizada con éxito'
+    })
+})

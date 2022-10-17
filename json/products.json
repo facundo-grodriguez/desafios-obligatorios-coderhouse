@@ -66,7 +66,7 @@
         "brand": "XIAOMI",
         "name": "NOTE 11 PRO",
         "image": "./assets/images/redmi-note11pro.jpg",
-        "prie": 305,
+        "price": 305,
         "quantity": 0
     },
     {
@@ -94,7 +94,7 @@
         "brand": "XIAOMI",
         "name": "POCO X4 PRO",
         "image": "./assets/images/redmi-pocox4pro.jpg",
-        "prie": 360,
+        "price": 360,
         "quantity": 0
     },
     {
@@ -108,7 +108,7 @@
         "brand": "IPHONE",
         "name": "12 MINI",
         "image": "./assets/images/iphone-12mini.jpg",
-        "price": 79,
+        "price": 790,
         "quantity": 0
     },
     {

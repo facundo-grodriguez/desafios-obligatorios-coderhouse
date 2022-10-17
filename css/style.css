@@ -56,9 +56,10 @@ margin: auto;
 }
 
 .btn-cart {
-width: 25%;
+height: 3rem;
 padding: 5px;
 border: 1px solid #b0c4dead;
+
 }
 
 /* From uiverse.io by @alexruix */

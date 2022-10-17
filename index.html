@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./assets/iconos/fontawesome-free-6.1.1-web/css/all.min.css">
     <script defer src="./bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <!-- <script defer src="./js/products.js"></script> -->
     <script defer src="./js/variables.js"></script>
     <script defer src="./js/cart.js"></script>
     <script defer src="./js/sales.js"></script>
@@ -39,10 +38,6 @@
                     <button type="button" class="btn btn-secondary" id="addingProducts" data-toggle="tooltip"
                         data-placement="top" title="Cargar nuevo producto">
                         <strong>+</strong>
-                    </button>
-                    <button type="button" class="btn btn-secondary" id="productos" data-toggle="tooltip"
-                        data-placement="top" title="Cargar nuevo producto">
-                        <strong>Productos</strong>
                     </button>
                     <button class="btn btn-secondary collapsed " type="button" data-toggle="collapse"
                         data-target="#cart" aria-controls="cart" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,15 +71,12 @@
             <h2 class="">XIAOMI || IPHONE</h2>
             <h3 class="">EN STOCK || ENTREGA INMEDIATA</h3>
         </div>
-
+        
         <div class="row mt-3 justify-content-center cart collapse" id="cart">
-            <div>
-
-            </div>
-            <div class="" id="cartContainer">
-            </div>
+            <div class="" id="cartContainer"></div>
         </div>
-        <div class="row mt-3 justify-content-center " id="container"></div>
+    </div>
+    <div class="row mt-3 justify-content-center " id="container"></div>
     </section>
 
 
@@ -95,25 +87,33 @@
             <h3 class="">NUEVOS PRODUCTOS</h3>
         </div>
 
-        <form class="container" >
+        <form class="container">
+            <h4>Cargar los productos en mayuscula !!!</h4>
             <div class=" mb-3 w-50">
                 <label for="brand" class="form-label">Marca</label>
-                <input type="text" class="form-control" id="brandNewProduct" placeholder="Ingrese la marca"  required>
+                <input type="text" class="form-control" id="brandNewProduct" placeholder="Ingrese la marca"
+                    value="iphone" required>
             </div>
             <div class="mb-3 w-50">
                 <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nameNewProduct" placeholder="Ingrese modelo" required >
+                <input type="text" class="form-control" id="nameNewProduct" placeholder="Ingrese modelo" value="14"
+                    required>
             </div>
             <div class="mb-3 w-50">
-                <label for="image" class="form-label">Imagen </label>
-                <input type="file" class="form-control-file" id="imageNewProduct" >
+                <label for="image" class="form-label">Imagen (precargada) </label>
+                <input type="file" class="form-control-file" id="imageNewProduct" disabled>
             </div>
             <div class="mb-3 w-50">
                 <label for="name" class="form-label">Precio</label>
-                <input type="number" class="form-control" id="priceNewProduct" placeholder="Ingrese precio" required>
+                <input type="number" class="form-control" id="priceNewProduct" placeholder="Ingrese precio" value="1099"
+                    required>
             </div>
 
             <button type="button" class="btn btn-primary" id="submitNewProduct">Subir Producto</button>
+            <button type="button" class="btn btn-secondary" id="productos" data-toggle="tooltip" data-placement="top"
+                title="Cargar nuevo producto">
+                <strong>Nueva lista de productos</strong>
+            </button>
         </form>
 
     </section>

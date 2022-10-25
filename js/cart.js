@@ -10,10 +10,10 @@ const updateCart = (cart) => {
     }
     for (const product of cart) {
         const div = document.createElement("div")
-        div.setAttribute("class", "card text-center col-xl-2 col-md-3 col-sm-4 col-8 m-3")
+        div.setAttribute("class", "card text-center col-xl-2 col-md-3 col-sm-4 col-8 m-3 ")
         div.setAttribute("id", "cartContainer")
         div.innerHTML +=
-        `
+            `
                     <div class="card-info">
                         <p class="text-title">${product.name} </p>
                         <p class="text-body">${product.brand}</p>
@@ -28,12 +28,18 @@ const updateCart = (cart) => {
                         <i class="fa-regular fa-trash-can remove" data-id="${product.name}"></i>
                         </div>
                     </div>
-            `
-            cartContainer.appendChild(div)
-        }
-        /* div.innerHTML = `<button type="button" class="btn-cart btn btn-secondary " id="buy">Finalizar compra</button>` */
-        
+                    `
+
+        cartContainer.appendChild(div)
     }
+
+    const btnFinish = document.createElement("button")
+    btnFinish.setAttribute("class", "btn-cart btn btn-secondary")
+    btnFinish.setAttribute("id", "finish")
+    btnFinish.innerText = "Finalizar compra"
+    cartContainer.appendChild(btnFinish)
+}
+
 
 const saveInLocalStorage = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value))
@@ -69,10 +75,6 @@ const loadCart = () => {
 }
 
 
-let collection = document.querySelector(".cart");
-
-collection.addEventListener("click", remove);
-
 //REMOVIENDO LOS PRODUCTOS DEL CARRO
 function remove(e) {
     let idProd;
@@ -107,10 +109,34 @@ function recoveryCart() {
 recoveryCart()
 
 
-//agregar el boton comprar
-buy.addEventListener("click", () => {
+
+
+const borrandoCarrito = () => {
     Swal.fire({
         icon: 'success',
         title: 'Compra realizada con éxito'
     })
-})
+    let cartContainer = document.querySelector("#cart")
+    cartContainer.innerHTML = []
+    saveInLocalStorage("cart", cart)
+}
+
+//agregar el boton comprar
+if (btnbuy) {
+    btnbuy.addEventListener("click", borrandoCarrito);
+}
+
+let collection = document.querySelector(".cart");
+
+collection.addEventListener("click", remove);
+
+
+//precio total del carrito
+
+const finalPriceCart = () => {
+    const finalPrice = cart.reduce(
+        (acc, products) => acc + products.price * products.quantity,
+        0
+    );
+    return finalPrice;
+};

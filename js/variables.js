@@ -7,7 +7,7 @@ const container = document.querySelector("#container")//Contenedor de cards
 const btnCart = document.querySelector("#btnCart") //Contenedor de productos
 const addProducts = document.querySelector("#addingProducts")
 const allProducts = document.querySelector("#productos")//aparezcan todos los productos una vez cargado uno nuevo
-const buy = document.querySelector("#buy")
+const btnbuy = document.querySelector("#finish")
 
 
 // LLAMADAS DEL ADMINISTRADOR DE PRODUCTOS

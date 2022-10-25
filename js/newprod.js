@@ -26,8 +26,6 @@ const addingProducts = () => {
 
 //INGRESO ADMIN / TERNARIO / SWEET ALERT
 const adminLogin = async () => {
-    const name = "admin"
-    const password = 1234
     
     const admin = await Swal.fire({
         title: 'Datos de administrador',
@@ -47,8 +45,7 @@ const adminLogin = async () => {
         
     })
     
-    //Intento hacerlo con && pero no me deja entrar asi que solo poniendo admin ya entra
-    const permitted = (user === name || pass === password)
+    const permitted = (user === "admin" && pass === "1234")
     
 
     permitted ? vanishProducts() 

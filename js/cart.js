@@ -68,6 +68,10 @@ const loadCart = () => {
             }
             saveInLocalStorage("cart", cart)
             updateCart(cart)
+            Swal.fire({
+                icon: 'success',
+                title: `Se sumo al carrito ${button.id}`
+            })
         })
 
     }
@@ -77,7 +81,7 @@ const loadCart = () => {
 
 //REMOVIENDO LOS PRODUCTOS DEL CARRO
 function remove(e) {
-    let idProd;
+    let idProd = " ";
     if (e.target.classList.contains("remove")) {
         idProd = e.target.getAttribute("data-id");
         idProd = cart.find((element) => element.name == idProd);

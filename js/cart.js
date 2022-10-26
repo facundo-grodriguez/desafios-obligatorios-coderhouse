@@ -1,6 +1,8 @@
 //CART
 const cart = []
 
+
+
 //CARGANDO AL CARRO
 const updateCart = (cart) => {
     let cartContainer = document.querySelector("#cart")
@@ -38,12 +40,23 @@ const updateCart = (cart) => {
     btnFinish.setAttribute("id", "finish")
     btnFinish.innerText = "Finalizar compra"
     cartContainer.appendChild(btnFinish)
+    btnFinish.addEventListener("click",()=> borrandoCarrito());
 }
-
 
 const saveInLocalStorage = (key, value) => {
     localStorage.setItem(key, JSON.stringify(value))
 }
+
+const borrandoCarrito = () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Compra realizada con éxito'
+    }) 
+    let cartContainer = document.querySelector("#cart")
+    cartContainer.innerHTML = []
+    localStorage.removeItem("cart")
+}
+
 
 //DANDOLE VIDA AL BOTON PARA QUE CARGUE EN EL CARRO
 const buttons = document.getElementsByClassName("buttonCart")
@@ -81,18 +94,18 @@ const loadCart = () => {
 
 //REMOVIENDO LOS PRODUCTOS DEL CARRO
 function remove(e) {
-    let idProd = " ";
+    let idProd = "";
     if (e.target.classList.contains("remove")) {
         idProd = e.target.getAttribute("data-id");
         idProd = cart.find((element) => element.name == idProd);
     }
-
+    
     if (idProd.quantity === 1) {
         let product = cart.find((prod) => prod.name == idProd.name);
         let index = cart.indexOf(product);
         cart.splice(index, 1);
-        updateCart(cart);
-
+        updateCart(cart)
+        
     } else if (idProd) {
         idProd.quantity--;
         updateCart(cart)
@@ -112,23 +125,6 @@ function recoveryCart() {
 }
 recoveryCart()
 
-
-
-
-const borrandoCarrito = () => {
-    Swal.fire({
-        icon: 'success',
-        title: 'Compra realizada con éxito'
-    })
-    let cartContainer = document.querySelector("#cart")
-    cartContainer.innerHTML = []
-    saveInLocalStorage("cart", cart)
-}
-
-//agregar el boton comprar
-if (btnbuy) {
-    btnbuy.addEventListener("click", borrandoCarrito);
-}
 
 let collection = document.querySelector(".cart");
 
